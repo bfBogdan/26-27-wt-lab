@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/register_style.css">
+    <title>Înregistrare</title>
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <h1>Inregistreaza-te</h1>
+            <form class="register-form" action="#" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="username">Nume utilizator</label>
+                    <input type="text" id="username" name="username" placeholder="ex: maria92" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="ex: nume@exemplu.com" required>
+                </div>
+                <div class="row two-col">
+                    <div>
+                        <label for="password">Parolă</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="confirm_password">Confirmă parola</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+                </div>
+                <fieldset class="row">
+                    <legend>Gen</legend>
+                    <label><input type="radio" name="gender" value="femeie"> Femeie</label>
+                    <label><input type="radio" name="gender" value="barbat"> Bărbat</label>
+                    <label><input type="radio" name="gender" value="altul"> Altul</label>
+                </fieldset>
+                <div class="row">
+                    <label for="account_type">Tip cont</label>
+                    <select id="account_type" name="account_type" required>
+                        <option value="" selected disabled>Selectează</option>
+                        <option value="personal">Personal</option>
+                        <option value="profesional">Profesional</option>
+                    </select>
+                </div>
+                <fieldset class="row">
+                    <legend>Interese</legend>
+                    <label><input type="checkbox" name="interests[]" value="frontend"> Frontend</label>
+                    <label><input type="checkbox" name="interests[]" value="backend"> Backend</label>
+                    <label><input type="checkbox" name="interests[]" value="ux-ui"> UX/UI</label>
+                    <label><input type="checkbox" name="interests[]" value="javascript"> JavaScript</label>
+                    <label><input type="checkbox" name="interests[]" value="python-web"> Python Web</label>
+                    <label><input type="checkbox" name="interests[]" value="wordpress"> WordPress</label>
+                    <label><input type="checkbox" name="interests[]" value="django"> Django</label>
+                </fieldset>
+                <div class="row">
+                    <label for="avatar">Încarcă avatar</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+                <div class="row">
+                    <label for="description">Scurtă descriere</label>
+                    <textarea id="description" name="description" placeholder="Scrie câteva cuvinte despre tine..."></textarea>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn primary">Creează cont</button>
+                    <button type="reset" class="btn ghost">Resetează</button>
+                </div>
+                <p class="login-link"> Ai deja cont?
+                <a href="login.html">Mergi la login</a></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
