@@ -1,0 +1,17 @@
+"use strict";
+const cursor = document.createElement("div");
+cursor.id = "cursor";
+document.body.appendChild(cursor);
+let hue = 0;
+document.addEventListener("mousemove", (e) => {
+    // Actualizeaza pozitia elementului cursor in functie de coordonatele mouse-ului
+    cursor.style.left = `${e.clientX}px`; // coordonata X
+    cursor.style.top = `${e.clientY}px`; // coordonata Y
+});
+function animateColor() {
+    hue = (hue + 1) % 360;
+    cursor.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+    cursor.style.boxShadow = `0 0 15px hsl(${hue}, 100%, 50%)`;
+    requestAnimationFrame(animateColor);
+}
+animateColor();

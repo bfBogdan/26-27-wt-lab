@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Galerie</title>
+    <link rel="stylesheet" href="{% static 'CSS/galerie.css' %}">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-view">
+            <img id="carousel-image" src="{% static 'MEDIA/g1.jpeg' %}" alt="Carusel">
+        </div>
+    </div>
+    <script src="{% static 'TS/galerie.js' %}"></script>
+</body>
+</html>
